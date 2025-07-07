@@ -85,7 +85,7 @@ DATABASES = {
         'NAME': 'django_db',
         'USER': 'root',
         'PASSWORD': 'M,A,,J,H,123',
-        'HOST': '192.168.110.209',
+        'HOST': '127.0.0.1',
         'PORT': '3306',
     }
 }
