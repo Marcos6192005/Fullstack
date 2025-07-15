@@ -18,7 +18,12 @@ SECRET_KEY = 'django-insecure-j$j-bxgs(6e@35&_^a3&g)^iz%izda3l95=5+i9fz!!&c(u)@*
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '192.168.110.44']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '192.168.120.44']
+
+CORS_ORIGIN_ALLOW_ALL = True
+CORS_ORIGIN_WHITELIST = (
+    '192.168.120.210:8080'
+    )
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -27,7 +32,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'bill',
+    'rest_framework',
+    'coreapi',
 ]
+
+REST_FRAMEWORK = {
+    'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema'
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -37,6 +49,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'core.urls'
@@ -62,8 +75,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'django_db',
-        'USER': 'python',
-        'PASSWORD': 'python123*',
+        'USER': 'Haysel',
+        'PASSWORD': 'canelita20',
         'HOST': '192.168.120.209',
         'PORT': '3306',
     }
