@@ -18,11 +18,11 @@ SECRET_KEY = 'django-insecure-j$j-bxgs(6e@35&_^a3&g)^iz%izda3l95=5+i9fz!!&c(u)@*
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '192.168.120.44']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '10.185.251.44']
 
 CORS_ORIGIN_ALLOW_ALL = True
 CORS_ORIGIN_WHITELIST = (
-    '192.168.120.210:8080'
+    '192.168.120.209:8080'
     )
 
 INSTALLED_APPS = [
@@ -77,7 +77,7 @@ DATABASES = {
         'NAME': 'django_db',
         'USER': 'Haysel',
         'PASSWORD': 'canelita20',
-        'HOST': '192.168.120.209',
+        'HOST': '10.185.251.209',
         'PORT': '3306',
     }
 }
