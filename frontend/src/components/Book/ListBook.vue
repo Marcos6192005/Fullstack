@@ -33,7 +33,7 @@ export default {
   },
   methods: {
     getBills () {
-    const path = 'http://localhost:8000/bill/bills/'
+    const path = 'http://10.185.251.44:8000/bill/bills/'
     axios.get(path)
         .then((res) => {
             this.bills = res.data
