@@ -64,18 +64,30 @@ export default {
             evt.preventDefault ()
             const path = `http://10.185.251.44:8000/bill/bills/${this.billID}/`
             axios.put(path, this.form)
-            .then((res) => {
-                this.$router.push({name: 'ListBook'})
+            .then((response) => {
+                this.form.title = response.data.title
+                this.$router.author = response.data.author
                 swal("Libro Actualizado", "Libro Actualizado Correctamente", "success");
-                
+                this.$router.push({name: 'ListBook'})
             })
             .catch((error) => {
                 console.log(error)
-            }
-            
-        )
-
+            })
         }
+    },
+    getBook () {
+        const path = `http://10.185.251.44:8000/bill/bills/${this.billID}/`
+        axios.get(path).then((res) => {
+            this.form.title = res.data.title
+            this.form.author = res.data.author
+            this.form.description = res.data.description
+        })
+        .catch((error) => {
+            console.log(error)
+        })
+    },
+    created () {
+        this.getBook()
     }
 }
 </script>
