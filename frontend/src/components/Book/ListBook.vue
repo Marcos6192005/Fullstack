@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col text-left">
         <h1 class="text-primary">Bill List</h1>
-        <b-button size="sm" :to="{ name: 'add-bill' }">Add Bill</b-button><br><br>
+        <b-button size="sm" :to="{ name: 'NewBook' }">Add Bill</b-button><br><br>
         <div class="col-md-12">
           <b-table striped hover :items="bills" :fields="fields">
             <template v-slot:cell(actions)="data">
