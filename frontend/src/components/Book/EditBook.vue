@@ -35,7 +35,6 @@
                                     
                                 </div>
                             </div>
-
                         </form>
                     </div>
                 </div>
@@ -93,5 +92,87 @@ export default {
 </script>
 
 <style lang="css">
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: sans-serif;
+}
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    margin-top: 1rem;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+.col {
+    flex: 1;
+    padding: 0.5rem;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.form-group {
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+.col-form-label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    width: 100%;
+}
+
+.form-control {
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 0.6rem 1.2rem;
+    margin-right: 1rem;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-large-space {
+    background-color: #6c757d;
+    color: white;
+}
+
+.btn-large-space:hover {
+    background-color: #5a6268;
+}
 
 </style>
