@@ -62,7 +62,7 @@ export default {
     methods: {
         onSubmit (evt) {
             evt.preventDefault ()
-            const path = `http://10.185.251.44:8000/bill/bills/${this.billID}/`
+            const path = `http://172.24.93.44:8000/bill/bills/${this.billID}/`
             axios.put(path, this.form)
             .then((response) => {
                 this.form.title = response.data.title
@@ -76,7 +76,7 @@ export default {
         }
     },
     getBook () {
-        const path = `http://10.185.251.44:8000/bill/bills/${this.billID}/`
+        const path = `http://172.24.93.44:8000/bill/bills/${this.billID}/`
         axios.get(path).then((res) => {
             this.form.title = res.data.title
             this.form.author = res.data.author
