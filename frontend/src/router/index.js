@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Listbook from '@/components/Book/listbook.vue'
 import EditBook from '@/components/Book/EditBook.vue'
 import DeleteBook from '@/components/Book/DeleteBook.vue'
+import NewBook from '@/components/Book/NewBook.vue'
 
 Vue.use(Router)
 
@@ -20,8 +21,13 @@ export default new Router({
     },
     {
       path: '/books/:bookId/delete',
-      name: 'ListBook',
+      name: 'DeleteBook',
       component: DeleteBook
+    },
+    {
+      path: '/books/:booksId/new',
+      name: 'NewBook',
+      component: NewBook
     },
   ]
 })

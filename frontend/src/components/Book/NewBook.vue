@@ -19,13 +19,13 @@
                             <div class="form-group row">
                                 <label for="author" class="col-sm-2 col-form-label">Author</label>
                                 <div class="col-sm-10">
-                                    <input type="text" placeholder="Author" class="form control" name="author" v-model="form.Author">
+                                    <input type="text" placeholder="Author" class="form control" name="author" v-model="form.author">
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label for="description" class="col-sm-2 col-form-label">Description</label>
                                 <div class="col-sm-10">
-                                    <input type="text" placeholder="Description" class="form control" name="Description" v-model="form.Description"></input>
+                                    <input type="text" placeholder="Description" class="form control" name="Description" v-model="form.description"></input>
                                 </div>
                             </div>
                             <div class="rows">
