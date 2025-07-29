@@ -33,7 +33,7 @@ export default {
     },
     methods: {
         getBook() {
-            const path = `http://10.185.251.44:8000/bill/bills/${this.billID}/`
+            const path = `http://172.24.93.44:8000/bill/bills/${this.billID}/`
             axios.get(path).then((res) => {
                 this.element.title
                 this.element.author
@@ -48,7 +48,7 @@ created() {
         this.getBook()
     },
     DeleteBook () {
-        const path = `http://10.185.251.44:8000/bill/bills/${this.billID}/`
+        const path = `http://172.24.93.44:8000/bill/bills/${this.billID}/`
         axios.delete(path).then(() => {
             swal("Libro Eliminado", "Libro Eliminado Correctamente", "success");
             this.$router.push({ name: 'ListBook' })

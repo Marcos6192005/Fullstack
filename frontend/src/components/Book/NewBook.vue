@@ -58,7 +58,7 @@ export default {
 methods: {
     onSubmit(evt) {
         evt.preventDefault()
-        const path = `http://10.185.251.44:8000/bill/bills/${this.billID}/`
+        const path = `http://172.24.93.44:8000/bill/bills/${this.billID}/`
         axios.post(path, this.form)
         .then((response) => {
             this.form.title = response.data.title
