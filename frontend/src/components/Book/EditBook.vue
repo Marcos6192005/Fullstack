@@ -1,47 +1,70 @@
-<templete lang="html">
-    <div class="container">
-        <div class="row">
-            <div class="col text-left">
-                <h1>Edit Book</h1>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col text-left">
-                <div class="card">
-                    <div class="card-body">
-                        <form @submit==onSubmit>
-                            <div class="form-group row">
-                                <label for="title" class="col-sm-2 col-form-label">title</label>
-                                <div class="col-sm-10">
-                                    <input type="text" placeholder="Title" class="form-control" name="title" v-model="form.title">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label for="author" class="col-sm-2 col-form-label">author</label>
-                                <div class="col-sm-10">
-                                    <input type="text" placeholder="author" class="form-control" name="author" v-model="form.title">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label for="desciption" class="col-sm-2 col-form-label">description</label>
-                                <div class="col-sm-10">
-                                    <input type="text" placeholder="description" class="form-control" name="description" v-model="form.title">
-                                </div>
-                            </div>
-                            <div class="rows">
-                                <div class="col text-left">
-                                    <b- button type="submit" variant="primary">Editar</b- button>
-                                    <b- button type="submit"class="btn-large-space":to="{ name: 'ListBook' }">Cancelar </b- button>
-                                    
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
+<template>
+  <div class="container">
+    <div class="row">
+      <div class="col text-left">
+        <h1 class="text-primary">Edit Book</h1>
+      </div>
     </div>
-</templete>
+    <div class="row">
+      <div class="col text-left">
+        <div class="card">
+          <div class="card-body">
+            <form @submit.prevent="onSubmit">
+              <div class="form-group row">
+                <label for="title" class="col-sm-2 col-form-label">Title</label>
+                <div class="col-sm-10">
+                  <input
+                    type="text"
+                    id="title"
+                    placeholder="Title"
+                    class="form-control"
+                    name="title"
+                    v-model="form.title"
+                  />
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <label for="author" class="col-sm-2 col-form-label">Author</label>
+                <div class="col-sm-10">
+                  <input
+                    type="text"
+                    id="author"
+                    placeholder="Author"
+                    class="form-control"
+                    name="author"
+                    v-model="form.author"
+                  />
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <label for="description" class="col-sm-2 col-form-label">Description</label>
+                <div class="col-sm-10">
+                  <input
+                    type="text"
+                    id="description"
+                    placeholder="Description"
+                    class="form-control"
+                    name="description"
+                    v-model="form.description"
+                  />
+                </div>
+              </div>
+
+              <div class="row mt-3">
+                <div class="col text-left">
+                  <b-button type="submit" variant="primary">Editar</b-button>
+                  <router-link :to="{ name: 'BillList' }" class="btn btn-secondary ml-2">Cancelar</router-link>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
 
 <script>
 import axios from 'axios';

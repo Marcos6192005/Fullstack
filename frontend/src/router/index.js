@@ -1,27 +1,36 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Listbook from '@/components/Book/listbook.vue'
+import ListBook from '@/components/Book/ListBook.vue'
+import NewBook from '@/components/Book/NewBook.vue'
 import EditBook from '@/components/Book/EditBook.vue'
 import DeleteBook from '@/components/Book/DeleteBook.vue'
 
 Vue.use(Router)
 
 export default new Router({
+  mode: 'history',  // para URLs limpias sin #
   routes: [
     {
       path: '/',
-      name: 'ListBook',
-      component: Listbook
+      name: 'ListBook',   // aquí usé 'BillList' para que coincida con tus botones y métodos
+      component: ListBook
     },
     {
-      path: '/books/:bookId/edit',
+      path: '/new',
+      name: 'NewBook',
+      component: NewBook
+    },
+    {
+      path: '/edit/:billID',
       name: 'EditBook',
-      component: EditBook
+      component: EditBook,
+      props: true  // para pasar el parámetro como prop
     },
     {
-      path: '/books/:bookId/delete',
-      name: 'ListBook',
-      component: DeleteBook
-    },
+      path: '/delete/:billID',
+      name: 'DeleteBook',
+      component: DeleteBook,
+      props: true
+    }
   ]
 })
