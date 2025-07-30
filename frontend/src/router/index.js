@@ -4,7 +4,6 @@ import ListBook from '@/components/Book/ListBook.vue'
 import NewBook from '@/components/Book/NewBook.vue'
 import EditBook from '@/components/Book/EditBook.vue'
 import DeleteBook from '@/components/Book/DeleteBook.vue'
-import NewBook from '@/components/Book/NewBook.vue'
 
 Vue.use(Router)
 
