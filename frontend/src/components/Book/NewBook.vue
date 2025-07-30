@@ -1,71 +1,45 @@
-<template>
-  <div class="container">
-    <div class="row">
-      <div class="col text-left">
-        <h1>New Book</h1>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col">
-        <div class="card">
-          <div class="card-body">
-            <form @submit="onSubmit">
-              <div class="form-group row">
-                <label for="title" class="col-sm-2 col-form-label">Title</label>
-                <div class="col-sm-10">
-                  <input
-                    type="text"
-                    placeholder="Title"
-                    class="form-control"
-                    name="title"
-                    v-model="form.title"
-                  />
-                </div>
-              </div>
-              <div class="form-group row">
-                <label for="author" class="col-sm-2 col-form-label">Author</label>
-                <div class="col-sm-10">
-                  <input
-                    type="text"
-                    placeholder="Author"
-                    class="form-control"
-                    name="author"
-                    v-model="form.author"
-                  />
-                </div>
-              </div>
-              <div class="form-group row">
-                <label for="description" class="col-sm-2 col-form-label"
-                  >Description</label
-                >
-                <div class="col-sm-10">
-                  <input
-                    type="text"
-                    placeholder="Description"
-                    class="form-control"
-                    name="description"
-                    v-model="form.description"
-                  />
-                </div>
-              </div>
-              <div class="rows">
-                <div class="col text-left">
-                  <b-button type="submit" variant="primary">Agregar</b-button>
-                  <b-button
-                  type="button"
-                  variant="secondary"
-                  @click="$router.push({ name: 'ListBook' })"
-                >
-                  Cancelar
-                </b-button>
-                </div>
-              </div>
-            </form>
-          </div>
+<template lang="html">
+    <div class="container">
+        <div class="row">
+            <div class="col text-left">
+                <h1>New Book</h1>
+            </div>
         </div>
-      </div>
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                        <form @submit="onSubmit">
+                            <div class="form-group row">
+                                <label for="title" class="col-sm-2-col-form-label">Title</label>
+                                <div class="col-sm-10">
+                                    <input type="text" placeholder="Title" class="form-control" name="title" v-model="form.title">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="author" class="col-sm-2 col-form-label">Author</label>
+                                <div class="col-sm-10">
+                                    <input type="text" placeholder="Author" class="form control" name="author" v-model="form.Author">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="description" class="col-sm-2 col-form-label">Description</label>
+                                <div class="col-sm-10">
+                                    <input type="text" placeholder="Description" class="form control" name="Description" v-model="form.Description"></input>
+                                </div>
+                            </div>
+                            <div class="rows">
+                                <div class="col text-left">
+                                    <b-button type="submit" variant="primary">Agregar</b-button>
+                                    <b-button type="submit" class="btn-large-sapace" :to="{ name:'ListBook' }">Cancelar</b-button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
 </template>
 
 <script>
