@@ -74,7 +74,7 @@ export default {
     data() {
         return {
         billID: this.$route.params.billID,
-            from: {
+            form: {
                 title: '',
                 author: '',
                 description: ''
@@ -82,32 +82,34 @@ export default {
         }
     },
     methods: {
-        onSubmit (evt) {
-            evt.preventDefault ()
-            const path = `http://172.24.93.44:8000/bill/bills/${this.billID}/`
-            axios.put(path, this.form)
-            .then((response) => {
-                this.form.title = response.data.title
-                this.$router.author = response.data.author
-                swal("Libro Actualizado", "Libro Actualizado Correctamente", "success");
-                this.$router.push({name: 'ListBook'})
-            })
-            .catch((error) => {
-                console.log(error)
-            })
-        }
-    },
-    getBook () {
-        const path = `http://172.24.93.44:8000/bill/bills/${this.billID}/`
-        axios.get(path).then((res) => {
-            this.form.title = res.data.title
-            this.form.author = res.data.author
-            this.form.description = res.data.description
+    onSubmit(evt) {
+      evt.preventDefault();
+      const path = `http://172.24.93.44:8000/bill/bills/${this.billID}/`;
+      axios.put(path, this.form)
+        .then((response) => {
+          this.form.title = response.data.title;
+          this.form.author = response.data.author;
+          this.form.description = response.data.description;
+          swal("Libro Actualizado", "Libro Actualizado Correctamente", "success");
+          this.$router.push({ name: 'ListBook' });
         })
         .catch((error) => {
-            console.log(error)
-        })
+          console.log(error);
+        });
     },
+    getBook() {
+      const path = `http://172.24.93.44:8000/bill/bills/${this.billID}/`;
+      axios.get(path)
+        .then((res) => {
+          this.form.title = res.data.title;
+          this.form.author = res.data.author;
+          this.form.description = res.data.description;
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    }
+  },
     created () {
         this.getBook()
     }
