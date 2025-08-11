@@ -55,7 +55,7 @@
               <div class="row mt-3">
                 <div class="col text-left">
                   <b-button type="submit" variant="primary">Editar</b-button>
-                  <router-link :to="{ name: 'BillList' }" class="btn btn-secondary ml-2">Cancelar</router-link>
+                  <b-button type="submit" class="btn-large-sapace" :to="{ name:'ListBook' }">Cancelar</b-button>
                 </div>
               </div>
             </form>

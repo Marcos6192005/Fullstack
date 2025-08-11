@@ -47,36 +47,36 @@ import axios from "axios";
 import swal from "sweetalert";
 
 export default {
-  data() {
-    return {
-      form: {
-        title: "",
-        author: "",
-        description: ""
-      }
-    };
-  },
-  methods: {
+    data() {
+        return {
+            form: {
+            title: "",
+            author: "",
+            description: ""
+                }
+            };
+        },
+methods: {
     onSubmit(evt) {
-      evt.preventDefault();
+    evt.preventDefault();
       const path = `http://172.24.93.44:8000/bill/bills/`; // URL sin ID para crear nuevo
 
-      axios
+    axios
         .post(path, this.form)
         .then((response) => {
           // Puedes resetear el formulario si quieres
-          this.form.title = "";
-          this.form.author = "";
-          this.form.description = "";
-          swal("Libro Agregado", "Libro Agregado Correctamente", "success");
-          this.$router.push({ name: "ListBook" });
-        })
+            this.form.title = "";
+            this.form.author = "";
+            this.form.description = "";
+            swal("Libro Agregado", "Libro Agregado Correctamente", "success");
+            this.$router.push({ name: "ListBook" });
+            })
         .catch((error) => {
-          console.error(error);
-          swal("Error", "No se pudo agregar el libro", "error");
+            console.error(error);
+            swal("Error", "No se pudo agregar el libro", "error");
         });
     }
-  }
+    }
 };
 </script>
 

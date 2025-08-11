@@ -11,7 +11,7 @@
     <div class="row mt-3">
       <div class="col text-left">
         <b-button variant="danger" @click="deleteBook">Eliminar</b-button>
-        <b-button variant="secondary" @click="cancelDelete" class="ml-2">Cancelar</b-button>
+        <b-button type="submit" class="btn-large-sapace" :to="{ name:'ListBook' }">Cancelar</b-button>
       </div>
     </div>
   </div>
@@ -24,7 +24,7 @@ import swal from 'sweetalert';
 export default {
   data() {
     return {
-      bookID: this.$route.params.billID, // <- tu param correcto
+        billID: this.$route.params.billID, // <- tu param correcto
       element: {
         title: '',
         author: '',
@@ -34,7 +34,7 @@ export default {
   },
   methods: {
     getBook() {
-      const path = `http://172.24.93.44:8000/bill/bills/${this.bookID}/`;
+      const path = `http://172.24.93.44:8000/bill/bills/${this.billID}/`;
       axios.get(path)
         .then((res) => {
           this.element = res.data; // ✅ Aquí llenas los datos correctamente
@@ -44,7 +44,7 @@ export default {
         });
     },
     deleteBook() {
-      const path = `http://172.24.93.44:8000/bill/bills/${this.bookID}/`;
+      const path = `http://172.24.93.44:8000/bill/bills/${this.billID}/`;
       axios.delete(path)
         .then(() => {
           swal("Libro Eliminado", "Libro eliminado correctamente", "success");
