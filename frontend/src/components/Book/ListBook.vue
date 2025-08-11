@@ -2,8 +2,8 @@
   <div class="container mt-4">
     <div class="row">
       <div class="col">
-        <h1 class="text-primary">Bill List</h1>
-        <b-button size="sm" variant="success" :to="{ name: 'NewBook' }">Add Bill</b-button>
+        <h1 class="text-primary">Book List</h1>
+        <b-button size="sm" variant="success" :to="{ name: 'NewBook' }">Add Book</b-button>
         <br /><br />
         <b-table
           striped
