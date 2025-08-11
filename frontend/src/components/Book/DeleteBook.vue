@@ -24,7 +24,7 @@ import swal from 'sweetalert';
 export default {
   data() {
     return {
-      bookID: this.$route.params.book, // <- tu param correcto
+      bookID: this.$route.params.billID, // <- tu param correcto
       element: {
         title: '',
         author: '',
@@ -62,5 +62,5 @@ export default {
 </script>
 
 
-<style lanf="css">
+<style lang="css">
 </style>

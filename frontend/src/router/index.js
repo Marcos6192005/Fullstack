@@ -27,8 +27,8 @@ export default new Router({
       props: true  // para pasar el parámetro como prop
     },
     {
-      path: '/books/:bookId/delete',
-      name: 'ListBook',
+      path: '/books/:billID/delete',
+      name: 'DeleteBook',
       component: DeleteBook
     },
   ]
