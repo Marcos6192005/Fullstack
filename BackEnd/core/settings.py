@@ -22,7 +22,7 @@ ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '172.24.93.44']
 
 CORS_ORIGIN_ALLOW_ALL = True
 CORS_ORIGIN_WHITELIST = (
-    '172.24.93.209:8080'
+    '172.24.93.210:8080'
     )
 
 INSTALLED_APPS = [
@@ -77,7 +77,7 @@ DATABASES = {
         'NAME': 'django_db',
         'USER': 'Haysel',
         'PASSWORD': 'canelita20',
-        'HOST': '172.24.93.210',
+        'HOST': '172.24.93.209',
         'PORT': '3306',
     }
 }
